@@ -1,0 +1,656 @@
+/* Nombre Completo: lucas Aristizabal
+    Clan: Tesla
+    fecha: 8 de Abril 2024 */
+
+
+
+
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+/* Fonts */
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
+/* Root */
+
+:root {
+    /* Colors */
+    --color-primary: #4845D2;
+    --color-secondary: #ff5a5f;
+    --color-text: #333;
+    --color-text-light: #f4f4f4;
+    /* Fonts */
+    --font-primary: "Lato", sans-serif;
+    --font-secondary: "Roboto", sans-serif;
+    /* Spaces */
+    --space-xxs: 5px;
+    --space-xs: 10px;
+    --space-sm: 15px;
+    --space-md: 20px;
+    --space-lg: 30px;
+    --space-xl: 40px;
+    /* Box Shadows */
+    --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-dark: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Border-radius */
+    --border-radius-sm: 8px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 12px;
+}
+
+/* Globals */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-secondary);
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Layout */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+/* Utilities */
+
+.color-primary {
+    color: var(--color-primary);
+}
+
+/* Write your CSS code here */
+
+/* empezamos con el header */
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 90%);
+    height: 80vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 10;
+
+}
+
+header>img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    opacity: 90%;
+}
+
+.color {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+}
+
+
+/* se crea un flex para ponerlos en los ejex respectivos, para header en el eje horizontal y el nav vertical. */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    z-index: 10;
+}
+
+.lista {
+    display: flex;
+    gap: 20px;
+    color: var(--color-text-light);
+
+}
+
+nav>button {
+    background-color: var(--color-primary);
+    height: 40px;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 20px;
+
+}
+
+nav>button>img {
+    height: 20px;
+    width: 20px;
+}
+
+.contenedor-inferior {
+    color: var(--color-text-light);
+    z-index: 10;
+    position: absolute;
+    bottom: 25%;
+    left: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+    text-align: center;
+}
+
+.contenedor-inferior>h1>span {
+    color: var(--color-primary);
+
+}
+
+.contenedor-inferior>h1 {
+    font-size: 60px;
+    padding-bottom: 10px;
+}
+
+.contenedor-inferior>p {
+    font-size: 17px;
+    font-weight: 600;
+    border-top: 1px solid var(--color-text-light);
+    padding-top: 25px;
+
+
+
+}
+
+.contenedor-inferior>button {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid var(--color-text-light);
+    color: var(--color-text-light);
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    border-radius: var(--border-radius-sm);
+
+}
+
+/* segunda seccion */
+
+section.flex1 {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    box-sizing: border-box;
+
+}
+
+.flex1>div {
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    width: 90%;
+    position: absolute;
+    bottom: 20%;
+    z-index: 40;
+    box-sizing: border-box;
+    left: 5%;
+}
+
+.hijo {
+    background-position: center;
+    background-size: cover;
+    width: 33.3%;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-light);
+    box-sizing: border-box;
+    border-radius: var(--border-radius-md);
+
+}
+
+/* aqui iran las propiedades que se le ponen a cada contenedor en general para ahorrar lineas de codigo */
+.hijo h2 {
+    border: 1px solid var(--color-text-light);
+    padding: 5px;
+    background-position: center;
+    background-size: cover;
+    z-index: 20;
+
+}
+
+.pruebita {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: var(--border-radius-md);
+}
+
+.design {
+    background-image: url(../img/service-1.jpg);
+    z-index: 0;
+    position: relative;
+
+}
+
+.creation {
+    background-image: url(../img/service-2.jpg);
+    z-index: 0;
+    position: relative;
+
+
+}
+
+.photography {
+    background-image: url(../img/service-3.jpg);
+    z-index: 0;
+    position: relative;
+}
+
+/* inicio de la seccion 2, para facilidad se usa flex con tamaños de 50% en 2 contenedores */
+.section2 {
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+    font-size: larger;
+}
+
+.imagen-pc {
+    background-image: url(../img/about-us.jpg);
+    width: 50%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+
+.parte-derecha {
+    width: 50%;
+    height: 100%;
+    background-color: rgba(52, 61, 169, 10%);
+    ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 20px 30px 50px;
+    align-items: flex-start;
+}
+
+.parte-derecha h2 {
+    color: var(--color-primary);
+    padding-top: 15px;
+    font-weight: 400;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contenido li {
+    list-style: inside;
+}
+
+.parte-derecha>button {
+    width: 300px;
+    padding: 10px 10px;
+    height: 60px;
+    background-color: var(--color-primary);
+    outline: none;
+    border: none;
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    color: var(--color-text-light);
+    font-size: 20px;
+    gap: 15px;
+}
+
+.parte-derecha>button>img {
+    width: 15%;
+    height: 80%;
+    padding-left: 10px;
+}
+
+/* seccion de la galeria */
+
+.section3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 30px;
+    padding: 20px 60px;
+    height: 80vh;
+
+}
+
+.section3>h3 {
+    padding: 10px;
+}
+
+.section3>div.padre {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+
+}
+
+/* se enmarca cada div con la imagen pertinente y se hara el collage siguiendo los usos de grid */
+
+div.padre div:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    background-image: url(../img/gallery-1.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+
+}
+
+div.padre div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    background-image: url(../img/gallery-2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+
+}
+
+div.padre div:nth-child(3) {
+    grid-column: 3/ 5;
+    background-image: url(../img/gallery-3.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+
+}
+
+div.padre div:nth-child(4) {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    background-image: url(../img/gallery-5.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+
+}
+
+div.padre div:nth-child(5) {
+    grid-column: 2/4;
+    grid-row: 3/4;
+    background-image: url(../img/gallery-4.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+
+}
+
+div.padre div:nth-child(6) {
+    grid-column: 4;
+    grid-row: 2/4;
+    background-image: url(../img/gallery-6.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+
+
+}
+
+/* seccion 4 :) aqui se va a abarcar los torneos que habran*/
+
+.section4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 255, 255, 0.075);
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px;
+}
+
+.section4>h4 {
+    font-size: 50px;
+}
+
+div.grid-padre {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 20px;
+    height: 1200px;
+
+
+}
+
+.contest {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px gray;
+    height: 100%;
+}
+
+.contest>img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 40%;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.contest>.mini {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.contest>.mini>h3 {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.contest>.mini>p {
+    margin-bottom: 15px;
+    font-size: 20px;
+
+}
+
+.contest>.mini>button {
+    border: 1px solid var(--color-primary);
+    outline: none;
+    border-radius: var(--border-radius-sm);
+    padding: 10px;
+    color: var(--color-primary);
+    background-color: transparent;
+}
+
+.contests {
+    width: 50%;
+    margin-left: 10px;
+    border-bottom: 2px solid black;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.contests>p {
+    width: 30%;
+}
+
+.hijo1 {
+    grid-column: 1;
+    grid-row: 1/4;
+
+}
+
+.hijo2 {
+    grid-column: 2;
+    grid-row: 1/4;
+}
+
+.hijo3 {
+    grid-column: 3;
+    grid-row: 1/4;
+}
+
+.hijo4 {
+    grid-column: 4;
+    grid-row: 2/5;
+}
+
+.hijo5 {
+    grid-column: 1;
+    grid-row: 4/9;
+}
+
+.hijo6 {
+    grid-column: 2;
+    grid-row: 4/9;
+}
+
+.hijo7 {
+    grid-column: 3;
+    grid-row: 4/9;
+}
+
+.hijo8 {
+    grid-column: 4;
+    grid-row: 5/9;
+
+
+}
+
+/* comienzo de la ultima seccion, el footer */
+footer {
+    height: 40vh;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    align-items: center;
+    opacity: 100%;
+    background-color: rgba(52, 61, 169, 70%);
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+/* se planea hacer un contenedor padre que abarque horizontalmente el all rights reserved y el menu */
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+
+}
+
+.top {
+    width: 30%;
+
+
+
+}
+
+.top img {
+    padding-bottom: 20px;
+
+
+}
+
+.bottom {
+    margin-top: 60px;
+
+
+}
+
+.horizontalPrueba {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+
+
+}
